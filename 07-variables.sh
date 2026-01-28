@@ -1,6 +1,7 @@
 #!/bin/bash
 
 echo "All arguments passwd to a script: $@"
+echo "Number of variables passwd to script: $#"
 echo "Script Name : $0"
 echo "Present which directory you are in: $PWD"
 echo "Who is running the Script: $USER"
