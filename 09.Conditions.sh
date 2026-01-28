@@ -1,6 +1,6 @@
 #!/bin/bash
 
-Num=10
+Num=$1
 
 if [ $Num -gt 20 ]; then
 
