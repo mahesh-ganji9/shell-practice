@@ -2,7 +2,7 @@
 
 Userid=$(id -u)
 LOG_FOLDER="/var/log/shell-script"
-LOG_File="var/log/shell-script/$0.log"
+LOG_File="/var/log/shell-script/$0.log"
 
 if [ $Userid -ne 0 ];then
        
