@@ -23,4 +23,4 @@ dnf install htop -y
 VALIDATE $? "Installing htop" 
 
 dnf install nodejs -y
-VALIDATE $? "Installing nodejs"" 
+VALIDATE $? "Installing nodejs"
