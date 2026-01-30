@@ -1,7 +1,7 @@
 #!/bin/bash
 echo "Running as UID: $(id -u)"
 whoami
-set -e
+
 
 R="\e[31m"
 G="\e[32m"
