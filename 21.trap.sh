@@ -1,6 +1,6 @@
 #!/bin/bash
 
-trap 'echo "Interrupted! by pressing CTRL+C"' $SIGINT
+trap 'echo "Interrupted! by pressing CTRL+C"; exit' SIGINT
 
 sleep 60
 
