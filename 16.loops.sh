@@ -15,6 +15,7 @@ mkdir -p $LOG_FOLDER
 VALIDATE() {
     if [ $? -ne 0 ]; then
    echo "$2...Failure" | tee -a $LOG_File
+   
 else
    echo "$2....Success" | tee -a $LOG_File
    fi
@@ -22,6 +23,6 @@ else
     
 for package in $@
   do 
-     dnf install $package -y | tee -a $LOG_File
+     dnf install $package -y &>>$LOG_File
      VALIDATE $? "$package Installation"
   done
