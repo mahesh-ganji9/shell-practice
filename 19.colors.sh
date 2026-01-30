@@ -17,10 +17,10 @@ mkdir -p $LOG_FOLDER
 
 VALIDATE() {
     if [ $? -ne 0 ]; then
-   echo "$2...Failure" | tee -a $LOG_File
+   echo "$R $2...Failure" | tee -a $LOG_File
    
 else
-   echo "$2....Success" | tee -a $LOG_File
+   echo "$G $2....Success" | tee -a $LOG_File
    fi
 }
     
@@ -28,10 +28,10 @@ for package in $@
   do 
      dnf list installed $package &>>$LOG_File
      if [ $? -ne 0 ]; then
-     echo "$package not installed ,installing now"
+     echo "$Y $package not installed ,installing now"
      dnf install $package -y &>>$LOG_File
      VALIDATE $? "$package Installation"
     else
-      echo "$package already installed ,skipping"
+      echo "$G $package already installed ,skipping"
       fi
   done
