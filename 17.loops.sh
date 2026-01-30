@@ -30,4 +30,5 @@ for package in $@
      VALIDATE $? "$package Installation"
     else
       echo "$package already installed ,skipping"
+      fi
   done
