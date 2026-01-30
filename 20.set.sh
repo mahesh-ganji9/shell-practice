@@ -18,7 +18,7 @@ echo "This will not execute"
 
 if [ $Userid -ne 0 ];then
        
-       echo -e "$R please run the script with root user access" | tee -a $LOG_File
+       echo -e "$R please run the script with root user access" 
        exit 1
    fi
 
