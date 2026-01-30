@@ -13,7 +13,7 @@ LOG_File="/var/log/shell-script/$0.log"
 echo "Install package Manually"
 
 dnf install ggggg -y
-echo "This will not execute
+echo "This will not execute"
 
 if [ $Userid -ne 0 ];then
        
