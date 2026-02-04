@@ -6,4 +6,4 @@ COUNTRY=INDIA
 echo "MY country is : $COUNTRY"
 echo "PID of SCRIPT-1 : $$"
 
-sh 24.script2.sh
+source 24.script2.sh
