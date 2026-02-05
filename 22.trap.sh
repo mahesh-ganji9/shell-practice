@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -e #ERR
+#set -e #ERR
 trap 'echo "There is an error $LINENO, command: $BASH_COMMAND"' ERR
 
 echo "This is Mahesh"
