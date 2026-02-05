@@ -9,7 +9,7 @@
 # done
 
 
-#/bin/bash
+#!/bin/bash
 
  trap "echo when press CTRL+C it will throw this" SIGINT
  i=1
