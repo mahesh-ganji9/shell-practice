@@ -9,14 +9,14 @@
 # done
 
 
-/bin/bash
+#/bin/bash
 
  trap "echo when press CTRL+C it will throw this" SIGINT
  i=1
-
+ sleep 120
  while [ $i -le 5 ]
  do
-   sleep 120
+   
    i=$(($i+1))
    
 echo $i
