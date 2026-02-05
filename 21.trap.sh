@@ -2,7 +2,7 @@
 
 trap "echo Finished the srcipt" EXIT
 
-while [i le 5]
+while [ i le 5 ]
  do
    echo $i
 done
