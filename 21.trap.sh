@@ -11,7 +11,7 @@
 
 #!/bin/bash
 
- trap "echo when press CTRL+C it will throw this" SIGINT
+ trap "echo when press CTRL+C it will throw this..exiting; exit 1" SIGINT
  i=1
  sleep 240
  while [ $i -le 5 ]
