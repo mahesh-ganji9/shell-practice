@@ -13,7 +13,7 @@
 
  trap "echo when press CTRL+C it will throw this" SIGINT
  i=1
- sleep 120
+ sleep 240
  while [ $i -le 5 ]
  do
    
