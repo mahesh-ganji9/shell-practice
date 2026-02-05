@@ -13,8 +13,9 @@
 
  trap "echo when press CTRL+C it will throw this" SIGINT
  i=1
+ sleep 60
  do
    i=$(($i+1))
-   sleep 60
+   
 echo $i
  done
