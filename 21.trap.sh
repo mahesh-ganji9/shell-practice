@@ -1,7 +1,8 @@
 #!/bin/bash
 
-trap 'echo "Interrupted! by pressing CTRL+C"; exit' SIGINT
+trap "echo Finished the srcipt" EXIT
 
-sleep 60
-
-echo "Done"
+while [i le 5]
+ do
+   echo $i
+done
