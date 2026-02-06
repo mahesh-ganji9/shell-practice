@@ -30,4 +30,4 @@ Files_to_Delete=$(find $LOG_DIR -name "*.log" -mtime +14)
 while IFS= read -r $line 
 do
    echo $line 
-done <<< $File_to_Delete   
+done <<< $Files_to_Delete   
