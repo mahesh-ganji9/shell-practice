@@ -14,7 +14,7 @@ if [ -d $LOG_DIR ] ; then
 fi
 
 Files_to_Delete=$(find $LOG_DIR -name "*.log" -type f -mtime +14)
-echo $Files_to_Delete
+#echo $Files_to_Delete
 
 # if [ -z "$Files" ]; then
 #   echo -e "$Y There are no Files to delete older than 14 days"
@@ -27,4 +27,7 @@ echo $Files_to_Delete
 #     done
 # fi
 
-while 
+while IFS= read -r $line 
+do
+   echo $line 
+done <<< $File_to_Delete   
