@@ -24,4 +24,5 @@ do
   else
     rm $File
     echo "Deleted file $File"
+  fi
 done
