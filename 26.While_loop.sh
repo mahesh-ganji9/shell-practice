@@ -7,5 +7,6 @@
 # done
 
 while IFS= read -r line;
-do  echo $filepath
+do 
+ echo $line
 done < ./24.script2.sh
