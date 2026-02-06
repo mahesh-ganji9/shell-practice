@@ -20,5 +20,5 @@ echo $Files
 for File in $Files
 do  
   rm $File
-  echo "Delete file $File
+  echo "Delete file $File"
 done
