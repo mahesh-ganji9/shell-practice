@@ -17,7 +17,7 @@ cd $LOG_DIR
 Files=$(find . -name "*.log" -type f -mtime +14)
 echo $Files
 
-if [ -z "$Files"]; then
+if [ -z "$Files" ]; then
   echo -e "$Y There are no Files to delete older than 14 days"
   exit
   else
