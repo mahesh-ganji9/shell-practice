@@ -1,7 +1,7 @@
 #!/bin/bash
 i=1
-while [ i -le 5 ]
+while [ $i -le 5 ]
 do 
    echo $i
-   count (( i++ ))
+   ((i++))
 done
