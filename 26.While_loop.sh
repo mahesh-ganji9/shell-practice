@@ -8,4 +8,4 @@
 
 while IFS= read -r line
 do  echo $filepath
-done >> ./24.script2.sh
+done << ./24.script2.sh
