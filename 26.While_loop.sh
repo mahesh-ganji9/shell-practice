@@ -8,5 +8,5 @@
 
 while IFS= read -r line;
 do 
- echo $line
-done << ./24.script2.sh
+ echo "$line"
+done < ./24.script2.sh
