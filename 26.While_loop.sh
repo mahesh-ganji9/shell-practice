@@ -3,5 +3,5 @@
 while [ i -le 5 ]
 do 
    echo $i
-   count ((i++))
+   count (( i++ ))
 done
