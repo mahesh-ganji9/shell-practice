@@ -13,7 +13,7 @@ if [ -d $LOG_DIR ] ; then
     exit 1
 fi
 
-Files_to_Delete=$(find $LOG_DIR -name "*.log" -type f -mtime +14)
+Files_to_Delete=$(find $LOG_DIR -name "*.log" -mtime +14)
 #echo $Files_to_Delete
 
 # if [ -z "$Files" ]; then
