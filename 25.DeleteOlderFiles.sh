@@ -4,9 +4,9 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
-$LOG_DIR=/var/log/app-logs
+LOG_DIR=/var/log/app-logs
 
-if [-d $LOG_DIR]; then
+if [ -d $LOG_DIR ] ; then
     echo "$Y $LOG_DIR exists"
  else
     echo "$R $LOG_DIR does not exists"
