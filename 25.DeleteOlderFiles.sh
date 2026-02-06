@@ -15,4 +15,4 @@ fi
 
 cd $LOG_DIR
 Files=$(find . -name "*.log" -mtime +14)
-echo $FILES
+echo $Files
