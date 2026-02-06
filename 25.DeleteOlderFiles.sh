@@ -7,9 +7,9 @@ N="\e[0m"
 LOG_DIR=/var/log/app-logs
 
 if [ -d $LOG_DIR ] ; then
-    echo "$Y $LOG_DIR exists"
+    echo -e "$Y $LOG_DIR exists"
  else
-    echo "$R $LOG_DIR does not exists"
+    echo -e "$R $LOG_DIR does not exists"
     exit 1
 fi
 
