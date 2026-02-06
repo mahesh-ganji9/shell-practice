@@ -1,3 +1,6 @@
 #!/bin/bash
-echo "MY country is : $COUNTRY"
-echo "PID of SCRIPT-1"
+
+COUNTRY=INDIA
+
+echo "I am in: $COUNTRY"
+echo "PID of SCRIPT-1: $$"
