@@ -17,12 +17,13 @@ cd $LOG_DIR
 Files=$(find . -name "*.log" -type f -mtime +14)
 echo $Files
 
-for File in $Files
-do   
-  if [ -z "$Files"]; then
-  echo -e "$Y There are Files to delete older than 14 days"
+if [ -z "$Files"]; then
+  echo -e "$Y There are no Files to delete older than 14 days"
+  exit
   else
+    for File in $Files
+    do
     rm $File
     echo "Deleted file $File"
-  fi
-done
+    done
+fi
