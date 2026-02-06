@@ -14,5 +14,11 @@ if [ -d $LOG_DIR ] ; then
 fi
 
 cd $LOG_DIR
-Files=$(find . -name "*.log" -mtime +14)
+Files=$(find . -name "*.log" -type f -mtime +14)
 echo $Files
+
+for File in $Files
+do  
+  rm $File
+  echo "Delete file $File
+done
