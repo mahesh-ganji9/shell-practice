@@ -41,7 +41,7 @@ if [ -z "$DEST_DIR" ]; then
    fi
 
 mapfile -t FILES < <(
-    find "$SRC_DIR" -type f -name "*.logs" -mtime +"${3:-14}"
+    find "$SRC_DIR" -type f -name "*.log" -mtime +"${3:-14}"
 )
 
 echo ${FILES[@]}
