@@ -49,7 +49,7 @@ printf '%s\n' "${FILES[@]}"
 if [ "${#FILES[@]}" -eq 0 ]; then
     echo "There are no Files to proceed with archive" 
     else
-    date=$(date +%d-%m-%y-%S)
-    ARCHIVE_Name=$DEST_DIR/$SRC_DIR.$date.tar.gz
+    timestamp=$(date +%d-%m-%y-%S)
+    ARCHIVE_Name=$DEST_DIR/app-logs.$timestamp.tar.gz
     tar -czvf "$ARCHIVE_Name" "${FILES[@]}"
  fi
