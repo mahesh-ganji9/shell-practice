@@ -19,8 +19,9 @@ if [ $Userid -ne 0 ];then
        exit 1
    fi
 
-USAGE() {
+USAGE(){
     echo -e "$R Please provide as <SRC_DIR> <DEST_DIR> <DAYS> [Default 14 days] $N"
+    exit 1
 }
 
 if [ $# -lt 2 ]; then
