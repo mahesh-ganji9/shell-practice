@@ -44,7 +44,7 @@ mapfile -t FILES < <(
     find "$SRC_DIR" -type f -name "*.log" -mtime +"${3:-14}"
 )
 
-echo ${FILES[@]}
+printf '%s\n' "${FILES[@]}"
 
 # if [ $Files -eq 0 ]; then
 #     echo "There are no Files to proceed with archive" 
