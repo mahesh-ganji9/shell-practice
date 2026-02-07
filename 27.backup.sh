@@ -22,6 +22,10 @@ USAGE() {
     echo -e "$R Please provide as <SRC_DIR> <DEST_DIR> <DAYS> [Default 14 days] $N"
 }
 
+if [ $# -lt 2 ]; then
+   USAGE
+fi
+
 if [ -z "$SRC_DIR" ]; then
 
     echo -e "$R please provide the SRC_DIR: $SRC_DIR"
@@ -33,8 +37,5 @@ if [ -z "$DEST_DIR" ]; then
      exit 1 
    fi
 
-if [ $# -lt 2 ]; then
-   USAGE
-   exit 1
-   fi
+
 
