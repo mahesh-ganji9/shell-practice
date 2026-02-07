@@ -1,0 +1,31 @@
+#!/bin/bash
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+N="\e[0m"
+Userid=$(id -u)
+LOG_FOLDER="/var/log/app-logs"
+LOG_DIR="/var/log/shell-script/"
+LOG_File="/var/log/shell-script/backup.log"
+Backup_DIR=/var/log/shell-script/Backup
+SRC_DIR=$1
+DEST_DIR=$2 
+DefDays=$3
+
+if [ $Userid -ne 0 ];then
+       
+       echo -e "$R please run the script with root user access" | tee -a $LOG_File
+       exit 1
+   fi
+
+if [ $SRC_DIR -le 0 ]; then
+
+    echo -e "$R please provide the $SRC_DIR" | tee -a $LOG_File
+    exit 1
+   fi
+
+if [ $DEST_DIR -le 0]; then
+     echo -e "$R please provide the $DEST_DIR" | tee -a $LOG_File
+    exit 1
+   fi
+
