@@ -46,7 +46,7 @@ mapfile -t FILES < <(
 
 printf '%s\n' "${FILES[@]}"
 
-if [ ${#Files[@]} -eq 0 ]; then
+if [ "${#Files[@]}" -eq 0 ]; then
     echo "There are no Files to proceed with archive" 
     else
     date=$(date +%d-%m-%y-%S)
