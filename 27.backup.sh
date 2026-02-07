@@ -18,6 +18,10 @@ if [ $Userid -ne 0 ];then
        exit 1
    fi
 
+USAGE() {
+    echo "Please provide as <SRC_DIR> <DEST_DIR> <DAYS> [Default 14 days]"
+}
+
 if [ -z "$SRC_DIR" ]; then
 
     echo -e "$R please provide the SRC_DIR: $SRC_DIR"
@@ -27,4 +31,8 @@ if [ -z "$SRC_DIR" ]; then
 if [ -z "$DEST_DIR" ]; then
      echo -e "$R please provide the DEST_DIR: $DEST_DIR"
    fi
+
+if [ $# -lt 2 ]; then
+   USAGE
+   done
 
