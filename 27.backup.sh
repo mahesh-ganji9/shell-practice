@@ -11,6 +11,7 @@ Backup_DIR=/var/log/shell-script/Backup
 SRC_DIR=$1
 DEST_DIR=$2 
 DefDays=$3
+DAYS=${3:-14}
 
 if [ $Userid -ne 0 ];then
        
@@ -38,5 +39,15 @@ if [ -z "$DEST_DIR" ]; then
      exit 1 
    fi
 
+mapfile -t FILES < <(
+    find "$SRC_DIR" -type f -name "*.logs" -mtime +"${3:-14}"
+)
 
+echo ${FILES[@]}
 
+# if [ $Files -eq 0 ]; then
+#     echo "There are no Files to proceed with archive" 
+#     else
+#     date=$(date +%d-%m-%y-%S)
+#     ARCHIVE_Name=$DEST_DIR/$SRC_DIR.$date.tar.gz
+#     tar -czvf "$ARCHIVE_Name" "${FILES[@]}"
