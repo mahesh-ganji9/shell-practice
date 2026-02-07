@@ -24,7 +24,7 @@ if [ $SRC_DIR -le 0 ]; then
     exit 1
    fi
 
-if [ $DEST_DIR -le 0]; then
+if [ $DEST_DIR -le 0 ]; then
      echo -e "$R please provide the $DEST_DIR" | tee -a $LOG_File
     exit 1
    fi
