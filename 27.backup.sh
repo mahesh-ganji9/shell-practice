@@ -34,5 +34,6 @@ if [ -z "$DEST_DIR" ]; then
 
 if [ $# -lt 2 ]; then
    USAGE
+   exit 1
    fi
 
