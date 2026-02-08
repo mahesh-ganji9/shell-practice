@@ -52,8 +52,8 @@ if [ "${#FILES[@]}" -eq 0 ]; then
     tar -czvf "$ARCHIVE_Name" "${FILES[@]}"
    if [ $? -eq 0 ]; then
      echo -e "$G Archive is Success $N"
-       for $filepath in "${FILES[@]}"; do"
-            echo deleting log file $filepath"
+       for $filepath in "${FILES[@]}"; do
+            echo "deleting log file $filepath"
             rm -f $filepath
             echo "Deleted file: $fielpath"
         done
