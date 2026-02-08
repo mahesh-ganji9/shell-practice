@@ -7,6 +7,6 @@ Userid=$(id -u)
 
 Threshold=60
 
-USAGE=$(df -hT | awk '{print $6}' | cut -d "%" f1)
+USAGE=$(df -hT | awk '{print $6}' | cut -d "%" -f1)
 
 echo $USAGE
