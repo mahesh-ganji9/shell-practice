@@ -55,7 +55,7 @@ if [ "${#FILES[@]}" -eq 0 ]; then
        for filepath in "${FILES[@]}"; do
             echo "deleting log file $filepath"
             rm -f $filepath
-            echo "Deleted file: $fielpath"
+            echo "Deleted file: $filepath"
         done
     else
         echo -e "$R Archive is Failure $N"
