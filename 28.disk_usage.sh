@@ -4,7 +4,7 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 Userid=$(id -u)
-Message=""
+# Message=""
 
 DISK_USAGE=$(df -hT | grep -v Filesystem)
 
@@ -16,7 +16,7 @@ do
    PARTITION=$(echo $line | awk '{print $7}')
    if [ $USAGE -gt $Threshold ]; then
        
-       Message+=echo -e "High Disk usage on $PARTITION:$USAGE% \n"
+       Message+="High Disk usage on $PARTITION:$USAGE% \n"
     fi 
 done <<< $DISK_USAGE  
 
