@@ -44,12 +44,20 @@ mapfile -t FILES < <(
     find "$SRC_DIR" -type f -name "*.log" -mtime +"${3:-14}"
 )
 
-printf '%s\n' "${FILES[@]}"
-
 if [ "${#FILES[@]}" -eq 0 ]; then
     echo "There are no Files to proceed with archive" 
     else
     timestamp=$(date +%d-%m-%y-%S)
     ARCHIVE_Name=$DEST_DIR/app-logs.$timestamp.tar.gz
     tar -czvf "$ARCHIVE_Name" "${FILES[@]}"
- fi
+   if [ $? -eq 0 ]; then
+     echo -e "$G Archive is Success $N"
+       for $filepath in "${FILES[@]}"; do"
+            echo deleting log file $filepath"
+            rm -f $filepath
+            echo "Deleted file: $fielpath"
+        done
+    else
+        echo -e "$R Archive is Failure $N"
+   fi
+fi
