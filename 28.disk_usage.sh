@@ -6,6 +6,7 @@ N="\e[0m"
 Userid=$(id -u)
 Message=""
 
+DISK_USAGE=$(df -hT | grep -v Filesystem)
 
 Threshold=3
 
@@ -16,7 +17,7 @@ do
    if [ $USAGE -gt $Threshold ]; then
        
        Message+="High Disk usage on $PARTITION:$USAGE"
-
-done
+    fi 
+done <<< $DISK_USAGE  
 
   echo "$Message"
