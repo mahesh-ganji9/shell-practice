@@ -5,7 +5,7 @@ Y="\e[33m"
 N="\e[0m"
 Userid=$(id -u)
 # Message=""
-SERVER_IP=$(curl http://169.254.169.254/latest/meta-data/local-ipv4)
+IP_ADDRESS=$(curl -sS http://169.254.169.254/latest/meta-data/local-ipv4)
 
 DISK_USAGE=$(df -hT | grep -v Filesystem)
 
@@ -17,10 +17,10 @@ do
    PARTITION=$(echo $line | awk '{print $7}')
    if [ $USAGE -gt $Threshold ]; then
        
-       Message+="High Disk usage on $PARTITION:$USAGE% \n"
+       Message+="High Disk usage on $PARTITION:$USAGE%"
     fi 
 done <<< $DISK_USAGE  
 
-echo -e "$Message"
+echo -e "$MESSAGE"
 
-sh 29.mail.sh "mahesh9.storage@gmail.com" "mahesh9.storage@gmail.com" "Disk uitlization" "$Message"
+sh 29.mail.sh "mahesh9.storage@gmail.com" "mahesh9.storage@gmail.com" "Disk uitlization on $IP_ADDRESS" "$MESSAGE" "DEVOPS_Team"
