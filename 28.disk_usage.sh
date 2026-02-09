@@ -19,7 +19,7 @@ do
    if [ $USAGE -gt $Threshold ]; then
        
        OUTPUT+="High Disk usage on $PARTITION:$USAGE\n"
-       MESSAGE+="<tr><td>$PARTITION</td><td>$USAGE%</td></tr>"
+       MESSAGE+="High Disk usage on $PARTITION:$USAGE\n"
     fi 
 done <<< $DISK_USAGE  
 
