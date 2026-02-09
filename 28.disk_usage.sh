@@ -5,6 +5,7 @@ Y="\e[33m"
 N="\e[0m"
 Userid=$(id -u)
 # Message=""
+SERVER_IP=$(curl http://169.254.169.254/latest/meta-data/local-ipv4)
 
 DISK_USAGE=$(df -hT | grep -v Filesystem)
 
@@ -21,3 +22,5 @@ do
 done <<< $DISK_USAGE  
 
 echo -e "$Message"
+
+sh 29.mail.sh "mahesh050917@gmail.com" "$SERVER_IP" "Disk Space Utilization"
