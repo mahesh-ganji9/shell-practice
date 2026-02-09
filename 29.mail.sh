@@ -8,11 +8,20 @@ FINAL_MESSAGE_BODY=$(echo $MESSAGE_BODY | sed -e 's/[]\/$*.^[]/\\&/g')
 FINAL_MESSAGE=$(sed -e "s/TEAM/$TEAM/g" -e "s/Server_IP/$IP_ADDRESS/g" -e "s/MESSAGE/$FINAL_MESSAGE_BODY/g" template.html)
 
 
-{ echo "$FROM_ADDRESS";
-  echo "$TO_ADDRESS"; 
-  echo "Subject: $SUBJECT";  
-  echo "MIME-Version: 1.0" 
-  echo "Content-Type: text/html; charset=UTF-8" 
-  echo ""
-  echo "$FINAL_MESSAGE"
-  echo ""; echo "<b>Test</b>"; } | msmtp $TO_ADDRESS
+
+{
+echo "To: $TO_ADDRESS"
+echo "Subject: $SUBJECT"
+echo "Content-Type: text/html"
+echo ""
+echo "$FINAL_MESSAGE"
+} | msmtp "$FROM_ADDRESS"
+
+# { echo "$FROM_ADDRESS";
+#   echo "$TO_ADDRESS"; 
+#   echo "Subject: $SUBJECT";  
+#   echo "MIME-Version: 1.0" 
+#   echo "Content-Type: text/html; charset=UTF-8" 
+#   echo ""
+#   echo "$FINAL_MESSAGE"
+#   echo ""; echo "<b>Test</b>"; } | msmtp $TO_ADDRESS
