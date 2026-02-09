@@ -10,7 +10,9 @@ FINAL_MESSAGE=$(sed -e "s/TEAM/$TEAM/g" -e "s/Server_IP/$IP_ADDRESS/g" -e "s/MES
 
 { echo "$FROM_ADDRESS";
   echo "$TO_ADDRESS"; 
-  echo "Content-Type: text/html"
   echo "Subject: $SUBJECT";  
+  echo "MIME-Version: 1.0" 
+  echo "Content-Type: text/html; charset=UTF-8" 
+  echo ""
   echo "$FINAL_MESSAGE"
   echo ""; echo "<b>Test</b>"; } | msmtp $TO_ADDRESS
