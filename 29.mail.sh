@@ -7,4 +7,4 @@ SUBJECT=$3
   echo "$TO_ADDRESS"; 
   echo "Subject: $SUBJECT"; 
   echo "Content-Type: text/html; charset=UTF-8"; 
-  echo ""; echo "<b>Test</b>"; } | msmtp $To_ADDRESS
+  echo ""; echo "<b>Test</b>"; } | msmtp $TO_ADDRESS
