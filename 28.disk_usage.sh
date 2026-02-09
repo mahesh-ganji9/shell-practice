@@ -23,4 +23,4 @@ done <<< $DISK_USAGE
 
 echo -e "$Message"
 
-sh 29.mail.sh "mahesh050917@gmail.com" "$SERVER_IP" "Disk Space Utilization"
+sh 29.mail.sh "mahesh050917@gmail.com" "DISK Space Utilization on $SERVER_IP" "$MESSAGE""$SERVER_IP" "DevopsTeam"
