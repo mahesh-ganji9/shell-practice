@@ -21,6 +21,6 @@ do
     fi 
 done <<< $DISK_USAGE  
 
-echo -e "$MESSAGE"
+echo -e "$MESSAGE \n"
 
 sh 29.mail.sh "mahesh9.storage@gmail.com" "mahesh050917@gmail.com" "Disk uitlization on $IP_ADDRESS is High" "$MESSAGE" "DEVOPS_Team"
