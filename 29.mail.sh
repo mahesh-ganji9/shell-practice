@@ -4,7 +4,8 @@ SUBJECT=$3
 MESSAGE_BODY=$4
 TEAM=$5
 
-FINAL_MESSAGE=$(sed -e "s/TEAM/$TEAM/g" -e "s/Server_IP/$IP_ADDRESS/g" -e "s/MESSAGE/$MESSAGE/g" template.html )
+
+FINAL_MESSAGE=$(sed -e "s/TEAM/$TEAM/g" -e "s/Server_IP/$IP_ADDRESS/g" -e "s/MESSAGE/$MESSAGE/g" template.html)
 
 
 { echo "$FROM_ADDRESS";
