@@ -6,6 +6,8 @@ N="\e[0m"
 Userid=$(id -u)
 # Message=""
 IP_ADDRESS=$(curl -sS http://169.254.169.254/latest/meta-data/local-ipv4)
+MESSAGE=""
+MESSAGE+="<tr><th>Partition</th><th>Usage</th></tr>"
 
 DISK_USAGE=$(df -hT | grep -v Filesystem)
 
@@ -18,7 +20,8 @@ do
    if [ $USAGE -gt $Threshold ]; then
        
        OUTPUT+="High Disk usage on $PARTITION:$USAGE\n"
-       MESSAGE+="High Disk usage on $PARTITION:$USAGE <br>"
+    # MESSAGE+="High Disk usage on $PARTITION:$USAGE <br>"
+    MESSAGE+="<tr><td>$PARTITION</td><td>$USAGE%</td></tr>"
     fi 
 done <<< $DISK_USAGE  
 
