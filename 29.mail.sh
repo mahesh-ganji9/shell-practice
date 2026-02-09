@@ -1,16 +1,10 @@
-TO_ADDRESS=$1
-SUBJECT=$2
-MESSAGE_BODY=$3
-SERVER_IP=$4
-TO_TEAM=$5
-FINAL_MESSAGE_BODY=$(echo $MESSAGE_BODY | sed -e 's/[]\/$*.^[]/\\&/g')
+FROM_ADDRESS=$1
+TO_ADDRESS=$2
+SUBJECT=$3
 
-MESSAGE=$(sed -e "s/T0_TEAM/$TO_TEAM/g" -e "s/SERVER_IP/$SERVER_IP/g")
 
-{
-echo "To: $TO_ADDRESS"
-echo "Subject: $SUBJECT"
-echo "Content-Type: text/html"
-echo ""
-echo "Test"
-} | msmtp "mahesh050917@gmail.com"
+{ echo "$FROM_ADDRESS";
+  echo "$TO_ADDRESS"; 
+  echo "Subject: $SUBJECT"; 
+  echo "Content-Type: text/html; charset=UTF-8"; 
+  echo ""; echo "<b>Test</b>"; } | msmtp $To_ADDRESS

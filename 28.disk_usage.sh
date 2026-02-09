@@ -23,4 +23,4 @@ done <<< $DISK_USAGE
 
 echo -e "$Message"
 
-sh 29.mail.sh "mahesh050917@gmail.com" 
+sh 29.mail.sh "mahesh9.storage@gmail.com" "mahesh050917@gmail.com" "Disk uitlization"
